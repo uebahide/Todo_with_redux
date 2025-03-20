@@ -1,9 +1,12 @@
+import { memo } from "react";
+
 interface PrimaryButtonProps {
   children: string;
   onClick: () => void;
 }
 
-export const PrimaryButton = (props: PrimaryButtonProps) => {
+export const PrimaryButton = memo((props: PrimaryButtonProps) => {
+  console.log("PrimaryButton");
   const { children, onClick } = props;
   return (
     <>
@@ -15,4 +18,4 @@ export const PrimaryButton = (props: PrimaryButtonProps) => {
       </button>
     </>
   );
-};
+});
